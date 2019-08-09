@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-3-7 下午5:53
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        style="@style/SecondaryTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/empty_view_hint_height"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/no_data" />
+</FrameLayout>

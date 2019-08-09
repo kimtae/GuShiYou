@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-3-6 下午4:22
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlContent"
+    style="@style/ItemStyle"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/new_friends_item_height"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivAvatar"
+        android:layout_width="@dimen/new_friends_item_avatar_size"
+        android:layout_height="@dimen/new_friends_item_avatar_size"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_default_portrait_small"
+        app:riv_corner_radius="@dimen/new_friends_item_avatar_round_corner_size"
+        app:riv_oval="false" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:id="@+id/tvName"
+            style="@style/PrimaryTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            tools:text="笔名" />
+
+        <TextView
+            android:id="@+id/tvGreeting"
+            style="@style/SmallestTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvName"
+            android:layout_marginTop="@dimen/small_vertical_margin"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="@dimen/greeting_textsize"
+            tools:text="对方请求添加你为好友" />
+    </RelativeLayout>
+
+    <ViewSwitcher
+        android:id="@+id/vsAccept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnAccept"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="@dimen/homepage_avatar_size"
+            android:layout_height="@dimen/small_button_height"
+            android:layout_marginRight="@dimen/medium_horizontal_margin"
+            android:gravity="center"
+            android:text="@string/agree"
+            android:textColor="@color/white"
+            android:textSize="@dimen/secondary_text_size"
+            android:theme="@style/NormalDarkButtonTheme" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            style="@style/SmallestTextStyle"
+            android:layout_width="@dimen/homepage_avatar_size"
+            android:layout_height="@dimen/small_button_height"
+            android:gravity="center"
+            android:text="@string/added" />
+    </ViewSwitcher>
+</LinearLayout>

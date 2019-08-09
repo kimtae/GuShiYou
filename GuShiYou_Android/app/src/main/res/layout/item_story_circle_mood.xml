@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-8-11 下午6:26
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/WhiteItemStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true">
+
+    <View
+        android:id="@+id/divider"
+        style="@style/DividerStyle" />
+
+
+    <ImageView
+        android:id="@+id/ivAvatar"
+        android:layout_width="@dimen/story_circle_item_avatar_size"
+        android:layout_height="@dimen/story_circle_item_avatar_size"
+        android:layout_below="@+id/divider"
+        android:layout_marginLeft="@dimen/story_circle_item_padding"
+        android:layout_marginTop="@dimen/story_circle_item_avatar_margin_top"
+        tools:src="@drawable/ic_default_portrait_small" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        style="@style/SmallestTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/divider"
+        android:layout_marginRight="@dimen/story_circle_item_padding"
+        android:layout_marginTop="@dimen/story_circle_time_padding_top"
+        tools:text="6小时前" />
+
+    <ImageView
+        android:id="@+id/ivVisibility"
+        android:layout_width="@dimen/story_circle_item_avatar_size"
+        android:layout_height="@dimen/story_circle_item_card_bottombar_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/story_circle_item_padding"
+        android:paddingBottom="@dimen/small_vertical_margin"
+        android:visibility="invisible"
+        android:scaleType="centerInside" />
+
+    <LinearLayout
+        android:id="@+id/llRight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider"
+        android:layout_marginLeft="@dimen/story_circle_item_right_margin_left"
+        android:layout_marginTop="@dimen/story_circle_item_padding"
+        android:layout_toRightOf="@+id/ivAvatar"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tvPseudonym"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingBottom="@dimen/small_vertical_margin"
+            android:textColor="@drawable/selector_story_circle_pseudonym"
+            android:textSize="@dimen/story_text_textsize"
+            tools:text="笔名" />
+
+
+        <com.vanniktech.emoji.EmojiTextView
+            android:id="@+id/etvText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lineSpacingExtra="@dimen/story_text_lineSpacingExtra"
+            android:maxLines="5"
+            android:paddingBottom="@dimen/medium_vertical_margin"
+            android:paddingRight="@dimen/story_circle_item_padding"
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/story_circle_text_textsize"
+            app:emojiSize="@dimen/story_circle_emoji_size"
+            tools:text="心静自然凉" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvImages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/story_circle_item_rvImages_margin_right"
+            android:overScrollMode="never"
+            android:paddingBottom="@dimen/medium_vertical_margin" />
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingBottom="@dimen/medium_vertical_margin"
+            android:textColor="@color/link"
+            android:textSize="@dimen/smallest_text_size"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/story_circle_item_card_bottombar_height"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/small_vertical_margin">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tvMessage"
+                style="@style/SecondaryTextStyle"
+                android:layout_width="@dimen/story_circle_message_width"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:drawableLeft="@drawable/selector_story_message"
+                android:drawablePadding="@dimen/small_horizontal_margin"
+                android:gravity="center_vertical" />
+
+
+            <TextView
+                android:id="@+id/tvFavour"
+                android:layout_width="@dimen/story_circle_favour_width"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:drawableLeft="@drawable/selector_story_favour"
+                android:drawablePadding="@dimen/small_horizontal_margin"
+                android:gravity="center_vertical" />
+
+
+            <ImageView
+                android:id="@+id/ivMoreActions"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/story_circle_item_more_actions_margin_left"
+                android:paddingLeft="@dimen/story_circle_item_padding"
+                android:paddingRight="@dimen/story_circle_item_padding"
+                android:scaleType="centerInside"
+                android:src="@drawable/selector_story_more" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        style="@style/DividerStyle"
+        android:layout_below="@+id/llRight" />
+</RelativeLayout>

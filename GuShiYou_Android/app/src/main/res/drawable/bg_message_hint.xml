@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-4-21 下午3:54
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/bg_chat_time" />
+    <corners android:radius="@dimen/message_hint_corner_radius" />
+    <padding
+        android:left="@dimen/message_hint_padding_horizontal"
+        android:right="@dimen/message_hint_padding_horizontal" />
+    <size android:height="@dimen/message_hint_height" />
+</shape>

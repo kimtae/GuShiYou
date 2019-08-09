@@ -1,0 +1,10 @@
+<resources>
+
+    <style name="ButtonStyle" parent="Widget.AppCompat.Button" />
+
+    <style name="FlatButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+</resources>

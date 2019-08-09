@@ -1,0 +1,30 @@
+<!--
+  ~ Created by 邱志立 on 17-2-26 下午12:28
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gushiyou.app.main.mvp.ui.fragment.FriendFragment">
+
+    <com.gushiyou.app.main.widget.wraprecyclerview.WrapRecyclerView
+        android:id="@+id/wrvFriends"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.gushiyou.app.main.widget.SideBar
+        android:id="@+id/sideBar"
+        android:layout_width="@dimen/sidebar_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="right" />
+
+    <include
+        android:id="@+id/tvFloatingLetter"
+        layout="@layout/floating_letter"
+        android:layout_width="@dimen/floating_letter_bg_size"
+        android:layout_height="@dimen/floating_letter_bg_size"
+        android:layout_gravity="center" />
+
+</FrameLayout>

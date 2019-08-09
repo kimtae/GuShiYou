@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-4-14 下午12:26
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ItemStyle"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/album_folder_item_height"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/medium_vertical_margin">
+
+    <FrameLayout
+        android:id="@+id/flImages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivImage3"
+            android:layout_width="@dimen/album_folder_thumbnails_size"
+            android:layout_height="@dimen/album_folder_thumbnails_size"
+            android:layout_marginLeft="@dimen/album_folder_thumbnails_offset_2"
+            android:layout_marginTop="@dimen/album_folder_thumbnails_offset_2"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ivImage2"
+            android:layout_width="@dimen/album_folder_thumbnails_size"
+            android:layout_height="@dimen/album_folder_thumbnails_size"
+            android:layout_marginLeft="@dimen/album_folder_thumbnails_offset_1"
+            android:layout_marginTop="@dimen/album_folder_thumbnails_offset_1"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ivImage1"
+            android:layout_width="@dimen/album_folder_thumbnails_size"
+            android:layout_height="@dimen/album_folder_thumbnails_size" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_toRightOf="@id/flImages"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvFolderName"
+            style="@style/PrimaryTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            tools:text="故事友" />
+
+        <TextView
+            android:id="@+id/tvImageCount"
+            style="@style/SmallestTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_vertical_margin"
+            android:maxLines="1"
+            tools:text="99张" />
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatRadioButton
+        android:id="@+id/rbChecked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:checked="true"
+        android:visibility="gone" />
+</RelativeLayout>

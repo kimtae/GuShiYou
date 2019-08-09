@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-3-6 上午12:09
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_new_friend"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gushiyou.app.main.mvp.ui.activity.NewFriendActivity">
+
+    <com.jaychang.srv.SimpleRecyclerView
+        android:id="@+id/srvNewFriends"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srv_dividerColor="@color/dividerColor"
+        app:srv_dividerPaddingLeft="@dimen/new_friends_item_divider_margin_left"
+        app:srv_emptyStateView="@layout/empty_view"
+        app:srv_layoutMode="linearVertical"
+        app:srv_loadMoreView="@layout/loading_view"
+        app:srv_showDivider="true" />
+</RelativeLayout>

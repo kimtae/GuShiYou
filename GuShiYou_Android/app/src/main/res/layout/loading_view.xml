@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-3-7 上午1:12
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/recyclerview_universal_item_height">
+
+    <com.afollestad.materialdialogs.common.progress.ProgressWheel
+        android:id="@+id/progressWheel"
+        android:layout_width="@dimen/small_circle_progress"
+        android:layout_height="@dimen/small_circle_progress"
+        android:layout_gravity="center"
+        wheel:matProg_barColor="@color/colorAccent"
+        wheel:matProg_barWidth="@dimen/small_progress_bar_width"
+        wheel:matProg_progressIndeterminate="true" />
+</FrameLayout>

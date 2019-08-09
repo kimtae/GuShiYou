@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-6-11 下午11:46
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tvSignature"
+    style="@style/SecondaryTextStyle"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/mine_signature_header_height"
+    android:gravity="center"
+    android:lineSpacingExtra="@dimen/mine_signature_spacing_extra"
+    android:paddingLeft="@dimen/mine_signature_horizontal_padding"
+    android:paddingRight="@dimen/mine_signature_horizontal_padding"
+    tools:text="飞流直下三千尺，疑似银河落九天。" />

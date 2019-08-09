@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-7-30 下午5:35
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="@dimen/story_item_time_width"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/today"
+        android:textColor="@color/textPrimary"
+        android:textSize="@dimen/story_today_textsize"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/ivWrite"
+        style="@style/Base.Widget.AppCompat.ActionButton.CloseMode"
+        android:layout_width="@dimen/story_write_btn_size"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/story_write_margin_right"
+        android:clickable="true"
+        android:src="@drawable/ic_edit_grey_600_24dp" />
+</RelativeLayout>

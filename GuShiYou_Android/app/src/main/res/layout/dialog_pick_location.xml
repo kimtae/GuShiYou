@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-5-4 下午1:17
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/etLocation"
+        style="@style/PrimaryTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/custom_location"
+        android:inputType="text"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:textCursorDrawable="@drawable/text_cursor"
+        android:visibility="gone"
+        app:met_clearButton="true"
+        app:met_floatingLabel="highlight"
+        app:met_maxCharacters="20"
+        app:met_minCharacters="1"
+        app:met_primaryColor="@color/colorAccent"
+        app:met_textColor="@color/textPrimary" />
+
+    <FrameLayout
+        android:id="@+id/flPreset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.jaychang.srv.SimpleRecyclerView
+            android:id="@+id/srvLocations"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/locations_recyclerview_height"
+            android:overScrollMode="never"
+            android:visibility="gone"
+            app:srv_dividerColor="@color/dividerColor"
+            app:srv_layoutMode="linearVertical"
+            app:srv_loadMoreView="@layout/loading_view"
+            app:srv_showDivider="true" />
+
+        <RelativeLayout
+            android:id="@+id/rlLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <com.afollestad.materialdialogs.common.progress.ProgressWheel xmlns:wheel="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/progressWheel"
+                android:layout_width="@dimen/small_circle_progress"
+                android:layout_height="@dimen/small_circle_progress"
+                wheel:matProg_barColor="@color/colorAccent"
+                wheel:matProg_barWidth="@dimen/small_progress_bar_width"
+                wheel:matProg_progressIndeterminate="true" />
+
+            <TextView
+                style="@style/SecondaryTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/medium_horizontal_margin"
+                android:layout_toRightOf="@+id/progressWheel"
+                android:text="@string/getting_location" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvErrorAlert"
+            style="@style/SecondaryTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/getting_location_error"
+            android:visibility="gone" />
+    </FrameLayout>
+</FrameLayout>

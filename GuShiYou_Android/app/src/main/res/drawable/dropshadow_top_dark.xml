@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-4-15 下午12:03
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:angle="-90"
+        android:endColor="@color/top_shadow_dark"
+        android:startColor="@android:color/transparent" />
+</shape>

@@ -1,0 +1,9 @@
+<!--
+  ~ Created by 邱志立 on 17-8-8 下午8:02
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="homepage_story_text_padding_top">0dp</dimen>
+</resources>

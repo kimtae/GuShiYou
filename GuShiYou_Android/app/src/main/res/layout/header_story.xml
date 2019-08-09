@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-7-29 上午11:28
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvSignature"
+        android:layout_width="@dimen/homepage_signature_max_width"
+        android:layout_height="@dimen/homepage_signature_height"
+        android:layout_gravity="left"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="@dimen/line_spacing_extra"
+        android:lines="2"
+        android:text="@string/signature"
+        android:textColor="@color/textSecondary"
+        android:textSize="@dimen/homepage_signature_textsize" />
+
+</FrameLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-3-30 下午9:59
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlContent"
+    style="@style/ItemStyle"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/new_friends_item_height">
+
+    <ImageView
+        android:id="@+id/ivAvatar"
+        android:layout_width="@dimen/new_friends_item_avatar_size"
+        android:layout_height="@dimen/new_friends_item_avatar_size"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        tools:src="@drawable/ic_default_portrait_small" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginTop="@dimen/medium_vertical_margin"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/small_horizontal_margin">
+
+        <TextView
+            android:id="@+id/tvName"
+            style="@style/PrimaryTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            tools:text="名称" />
+
+        <com.vanniktech.emoji.EmojiTextView
+            android:id="@+id/etvContent"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/recent_contact_item_content_height"
+            android:layout_below="@+id/tvName"
+            android:layout_marginTop="@dimen/small_vertical_margin"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/textSecondary"
+            android:textSize="@dimen/recent_contact_item_content_size"
+            app:emojiSize="@dimen/recent_contact_item_emoji_size"
+            tools:text="你好，吃饭了吗？" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvTime"
+        style="@style/SmallestTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/medium_vertical_margin"
+        android:gravity="top|right"
+        android:maxLines="1"
+        tools:text="昨天" />
+</LinearLayout>

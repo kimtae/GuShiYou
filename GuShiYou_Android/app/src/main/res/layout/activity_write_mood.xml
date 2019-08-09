@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-6-13 下午4:52
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_write_mood"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_white"
+    tools:context="com.gushiyou.app.main.mvp.ui.activity.WriteMoodActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/Widget.AppCompat.Toolbar.Button.Navigation"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/DarkToolbarTheme" />
+
+    <FrameLayout
+        android:id="@+id/flContentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical">
+
+                <com.vanniktech.emoji.EmojiEditText
+                    android:id="@+id/eetEditText"
+                    style="@style/PrimaryTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/write_mood_input_panel_margin_top"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="@string/this_moment_mood"
+                    android:imeOptions="actionSend"
+                    android:inputType="textMultiLine"
+                    android:lineSpacingExtra="@dimen/message_text_lineSpacingExtra"
+                    android:maxLength="258"
+                    android:minLines="4"
+                    android:textColorHint="@color/textHint"
+                    app:emojiSize="@dimen/primary_emoji_size" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/write_mood_bottom_action_bar_height"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/medium_vertical_margin">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/write_mood_action_side_bar_width"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvCharCount"
+                            style="@style/SmallestTextStyle"
+                            android:layout_width="@dimen/write_mood_action_width"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:gravity="center"
+                            android:text="0" />
+                    </LinearLayout>
+
+                    <com.jaychang.srv.SimpleRecyclerView
+                        android:id="@+id/srvImages"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:overScrollMode="never"
+                        app:srv_gridSpanCount="3"
+                        app:srv_isSpacingIncludeEdge="true"
+                        app:srv_layoutMode="grid"
+                        app:srv_showDivider="false"
+                        app:srv_spacing="@dimen/write_mood_images_margin" />
+
+                    <LinearLayout
+                        android:layout_width="@dimen/write_mood_action_side_bar_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivInsertEmoticon"
+                            style="@style/Base.Widget.AppCompat.ActionButton.CloseMode"
+                            android:layout_width="@dimen/write_mood_action_width"
+                            android:layout_height="@dimen/write_mood_action_width"
+                            android:clickable="true"
+                            android:src="@drawable/ic_insert_emoticon_grey_600_24dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <View
+            style="@style/BottomShadowStyle"
+            android:layout_alignParentTop="true" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/write_mood_bottom_action_bar_height"
+            android:background="@color/write_mood_bottom_action_bar_background"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/medium_horizontal_margin"
+            android:paddingRight="@dimen/medium_horizontal_margin">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+
+                <TextView
+                    android:id="@+id/tvLocation"
+                    style="@style/SecondaryTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/write_mood_bottom_action_height"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/selector_write_mood_bottom_action"
+                    android:clickable="true"
+                    android:ellipsize="end"
+                    android:gravity="left|center_vertical"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/write_mood_bottom_action_padding_horizontal"
+                    android:paddingRight="@dimen/write_mood_bottom_action_padding_horizontal"
+                    android:text="@string/add_location" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tvVisibility"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/write_mood_bottom_action_height"
+                    android:layout_gravity="right|center_vertical"
+                    android:background="@drawable/selector_write_mood_bottom_action"
+                    android:clickable="true"
+                    android:drawableLeft="@drawable/ic_public_blue"
+                    android:drawablePadding="@dimen/small_horizontal_margin"
+                    android:ellipsize="end"
+                    android:gravity="left|center_vertical"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/write_mood_bottom_action_padding_horizontal"
+                    android:paddingRight="@dimen/write_mood_bottom_action_padding_horizontal"
+                    android:text="@string/visibility_public"
+                    android:textColor="@color/link"
+                    android:textSize="@dimen/secondary_text_size" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/flEditBarBottomMargin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/popup_chat_input_more_actions_height"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewPagerBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dark_background"
+        android:visibility="invisible" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewerPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible" />
+</RelativeLayout>

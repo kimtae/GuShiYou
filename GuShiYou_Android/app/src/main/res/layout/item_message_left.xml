@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-3-19 下午9:17
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include
+        android:id="@+id/tvTime"
+        layout="@layout/layout_message_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/message_time_marigin_bottom"
+        android:layout_marginTop="@dimen/message_time_marigin_top"
+        tools:visibility="visible" />
+
+
+    <include
+        android:id="@+id/ivAvatar"
+        layout="@layout/layout_message_avatar"
+        android:layout_width="@dimen/chat_avatar_size"
+        android:layout_height="@dimen/chat_avatar_size"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvTime"
+        android:layout_marginLeft="@dimen/medium_horizontal_margin"
+        tools:src="@drawable/ic_default_portrait_chat" />
+
+    <FrameLayout
+        android:id="@+id/flContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTime"
+        android:layout_marginLeft="@dimen/small_horizontal_margin"
+        android:layout_marginRight="@dimen/left_message_margin_horizontal"
+        android:layout_toRightOf="@+id/ivAvatar"
+        android:minHeight="@dimen/chat_avatar_size">
+
+        <com.vanniktech.emoji.EmojiTextView
+            android:id="@+id/etvMessage"
+            style="@style/PrimaryTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:background="@drawable/selector_message_bubble_left"
+            android:gravity="left|center_vertical"
+            android:lineSpacingExtra="@dimen/message_text_lineSpacingExtra"
+            android:minHeight="@dimen/chat_avatar_size"
+            android:visibility="gone"
+            app:emojiSize="@dimen/primary_emoji_size"
+            tools:text="你好，很高兴见到你"
+            tools:visibility="visible" />
+
+        <com.gushiyou.app.main.widget.MaskImageView
+            android:id="@+id/mivImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:mask="@drawable/ic_message_image_mask_left" />
+    </FrameLayout>
+
+    <include
+        android:id="@+id/tvAlert"
+        layout="@layout/layout_message_alert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/flContent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/medium_vertical_margin" />
+</RelativeLayout>

@@ -1,0 +1,37 @@
+@import '../less/common.less';
+
+.page-size.form-control,.search-log-field.form-control {
+  display: inline;
+  width: auto;
+}
+
+.search-log-field.search-log-field {
+  width: 85px;
+}
+
+table .operator-id {
+  min-width: 75px;
+}
+
+table .realname {
+  min-width: 70px;
+}
+
+table .operation {
+  min-width: 80px;
+}
+
+table .params {
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+@media(min-width:@screen-sm-min) {
+  table .params {
+    max-width: 500px;
+  }
+}
+
+table .time {
+  min-width: 100px
+}

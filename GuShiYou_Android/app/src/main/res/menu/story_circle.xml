@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-9-2 下午12:23
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menuWrite"
+        android:icon="@drawable/ic_edit_white_24dp"
+        android:title="@string/write"
+        app:showAsAction="always" />
+</menu>

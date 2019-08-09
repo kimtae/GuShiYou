@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-2-26 下午12:28
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_story_homepage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.gushiyou.app.main.mvp.ui.activity.StoryHomepageActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:theme="@style/DarkToolbarTheme"
+        app:elevation="0dp">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:expandedTitleMarginBottom="@dimen/activity_vertical_margin"
+            app:expandedTitleMarginStart="@dimen/activity_horizontal_margin"
+            app:expandedTitleTextAppearance="@style/PrimaryTextInverseStyle">
+
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/ivCover"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cover_height"
+                android:background="@color/grey_800"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.8" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cover_height"
+                android:background="@drawable/cover_shade" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|left"
+                android:layout_marginBottom="@dimen/homepage_pseudonym_bottom"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="120dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    style="@style/TextAppearance.AppCompat.Title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLines="2"
+                    tools:text="笔名" />
+
+                <ImageView
+                    android:id="@+id/ivGender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/medium_horizontal_margin" />
+            </LinearLayout>
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                style="@style/Widget.AppCompat.Toolbar.Button.Navigation"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin">
+
+                <TextView
+                    android:id="@+id/tvGushihao"
+                    style="@style/TextAppearance.AppCompat.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1" />
+            </android.support.v7.widget.Toolbar>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvStoryLabel"
+                        style="@style/SmallestTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/story"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/smallest_text_size" />
+
+                    <TextView
+                        android:id="@+id/tvStoryCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="@dimen/medium_horizontal_margin"
+                        android:layout_toRightOf="@+id/tvStoryLabel"
+                        android:maxLines="1"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/smallest_text_size" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/homepage_story_reader_margin"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvReaderLabel"
+                        style="@style/SmallestTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/follower"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/smallest_text_size" />
+
+                    <TextView
+                        android:id="@+id/tvFollowerCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="@dimen/medium_horizontal_margin"
+                        android:layout_toRightOf="@+id/tvReaderLabel"
+                        android:maxLines="1"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/smallest_text_size" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View style="@style/BottomShadowStyle" />
+
+            <TextView
+                android:id="@+id/tvSignature"
+                android:layout_width="@dimen/homepage_signature_max_width"
+                android:layout_height="@dimen/homepage_signature_height"
+                android:layout_gravity="left"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="@dimen/line_spacing_extra"
+                android:lines="2"
+                android:text="@string/signature"
+                android:textColor="@color/textSecondary"
+                android:textSize="@dimen/homepage_signature_textsize" />
+
+            <View style="@style/DividerStyle" />
+
+            <LinearLayout
+                android:id="@+id/llStory"
+                style="@style/ItemStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/homepage_story_item_height"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/activity_horizontal_margin">
+
+                <TextView
+                    style="@style/PrimaryTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/medium_horizontal_margin"
+                    android:drawablePadding="@dimen/activity_horizontal_margin"
+                    android:gravity="center_vertical"
+                    android:text="@string/story" />
+
+                <ImageView
+                    android:id="@+id/ivStoryImage1"
+                    android:layout_width="@dimen/homepage_story_image_width"
+                    android:layout_height="@dimen/homepage_story_image_height"
+                    android:layout_marginLeft="@dimen/medium_horizontal_margin"
+                    android:layout_marginRight="@dimen/small_horizontal_margin"
+                    android:background="@drawable/bg_default_small_image"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/ivStoryImage2"
+                    android:layout_width="@dimen/homepage_story_image_width"
+                    android:layout_height="@dimen/homepage_story_image_height"
+                    android:layout_marginRight="@dimen/small_horizontal_margin"
+                    android:background="@drawable/bg_default_small_image"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/ivStoryImage3"
+                    android:layout_width="@dimen/homepage_story_image_width"
+                    android:layout_height="@dimen/homepage_story_image_height"
+                    android:background="@drawable/bg_default_small_image"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvStoryText"
+                    style="@style/SecondaryTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/medium_horizontal_margin"
+                    android:layout_marginRight="@dimen/medium_horizontal_margin"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:lineSpacingExtra="@dimen/homepage_story_text_lineSpacingExtra"
+                    android:maxLines="2"
+                    android:paddingTop="@dimen/homepage_story_text_padding_top"
+                    android:text="@string/not_write_story_hint"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey_white">
+
+                <View
+                    style="@style/DividerStyle"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:background="@color/grey_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/PrimaryTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:drawablePadding="@dimen/activity_horizontal_margin"
+                    android:gravity="center_vertical"
+                    android:text="@string/hometown" />
+
+                <TextView
+                    android:id="@+id/tvHometown"
+                    style="@style/SmallItemContentTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:maxLines="1" />
+            </LinearLayout>
+
+            <View style="@style/ItemBottomShadowStyle" />
+
+            <View
+                android:id="@+id/remarkSplitLine"
+                style="@style/DividerStyle"
+                android:layout_marginTop="@dimen/medium_vertical_margin" />
+
+            <LinearLayout
+                android:id="@+id/llRemark"
+                style="@style/ItemStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:clickable="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvRemarkLabel"
+                    style="@style/PrimaryTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:drawablePadding="@dimen/activity_horizontal_margin"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="@string/add_remark" />
+
+                <TextView
+                    android:id="@+id/tvRemark"
+                    style="@style/SmallItemContentTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:ellipsize="end"
+                    android:maxLines="1" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/remarkShadow"
+                style="@style/ItemBottomShadowStyle" />
+
+            <LinearLayout
+                android:id="@+id/llBottomButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_horizontal_margin"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:visibility="invisible">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnAddFriend"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height_normal"
+                    android:text="@string/add_to_be_friend"
+                    android:theme="@style/NormalDarkButtonTheme"
+                    android:visibility="gone" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnFollow"
+                    style="@style/PrimaryTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height_normal"
+                    android:layout_marginBottom="@dimen/small_vertical_margin"
+                    android:text="@string/follow"
+                    android:theme="@style/NormalDarkButtonTheme"
+                    android:visibility="gone" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnNewFriendFollow"
+                    style="@style/PrimaryTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height_normal"
+                    android:layout_marginBottom="@dimen/small_vertical_margin"
+                    android:text="@string/follow"
+                    android:theme="@style/WhiteButtonTheme"
+                    android:visibility="gone" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnChat"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height_normal"
+                    android:text="@string/chat"
+                    android:theme="@style/NormalDarkButtonTheme"
+                    android:visibility="gone" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnRemoveFromBlacklist"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height_normal"
+                    android:text="@string/remove_from_blacklist"
+                    android:theme="@style/NormalDarkButtonTheme"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/llAgreeRequest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btnAgreeRequest"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height_normal"
+                        android:layout_weight="1"
+                        android:text="@string/agree_request"
+                        android:theme="@style/NormalDarkButtonTheme" />
+
+                    <TextView
+                        android:id="@+id/tvGreeting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:lineSpacingExtra="@dimen/line_spacing_extra"
+                        android:maxLines="2"
+                        android:paddingLeft="@dimen/small_horizontal_margin"
+                        android:paddingRight="@dimen/small_horizontal_margin"
+                        android:paddingTop="@dimen/medium_vertical_margin"
+                        android:textColor="@color/textSecondary"
+                        android:textSize="@dimen/homepage_signature_textsize" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.gigamole.library.ShadowLayout
+        android:id="@+id/slAvatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/homepage_avatar_margin_right"
+        android:elevation="4dp"
+        app:layout_anchor="@id/appbar"
+        app:layout_anchorGravity="bottom|end"
+        app:sl_shadow_angle="90"
+        app:sl_shadow_color="@color/bottom_shadow"
+        app:sl_shadow_distance="@dimen/shadow_distance"
+        app:sl_shadow_radius="@dimen/shadow_radius"
+        app:sl_shadowed="true">
+
+        <ImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="@dimen/homepage_avatar_size"
+            android:layout_height="@dimen/homepage_avatar_size"
+            android:src="@drawable/ic_default_portrait_circle" />
+    </com.gigamole.library.ShadowLayout>
+</android.support.design.widget.CoordinatorLayout>

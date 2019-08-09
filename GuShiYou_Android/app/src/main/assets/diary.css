@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+#header {
+    color: #757575;
+}
+
+#diary_date {
+    display: inline-block;
+    font-size: 14px;
+    margin: 20px 0px 0px 20px;
+}
+
+#diary_weather {
+    display: inline-block;
+    font-size: 14px;
+    margin: 20px 20px 0px 24px;
+}
+
+#diary_location {
+    display: block;
+    font-size: 12px;
+    margin: 12px 0px 0px 20px;
+    vertical-align: bottom;
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#262626</color>
+    <color name="colorPrimaryDark">#161616</color>
+    <color name="textPrimary">#3F3F3F</color>
+    <color name="textSecondary">#757575</color>
+    <color name="textHint">#9F9F9F</color>
+    <color name="dividerColor">#E6E6E6</color>
+    <color name="colorAccent">#FFC107</color>
+    <color name="activity_background">#EDEDED</color>
+    <color name="black">@android:color/black</color>
+    <color name="white">@android:color/white</color>
+    <color name="grey_white">#fcfcfc</color>
+    <color name="grey">#cccccc</color>
+    <color name="grey_600">#757575</color>
+    <color name="grey_pressed">#696969</color>
+    <color name="grey_900">#212121</color>
+    <color name="grey_800">#424242</color>
+    <color name="black_pressed">#12000000</color>
+    <color name="link">#517aac</color>
+    <color name="translucent">#BF000000</color>
+    <color name="write_btns_background_color">#3F000000</color>
+    <color name="text_bg_translucent">#8C000000</color>
+    <color name="red">#F44336</color>
+    <color name="green">#8bc34a</color>
+    <color name="blue">#4285F4</color>
+    <color name="bottom_shadow">#46333333</color>
+    <color name="top_shadow_light">#33888888</color>
+    <color name="top_shadow_dark">#46333333</color>
+    <color name="bg_chat_time">#d3d3d3</color>
+    <color name="input_panel_divider">#1F000000</color>
+    <color name="input_panel_background">#f6f6f6</color>
+    <color name="input_panel_action_background">#fcfcfc</color>
+    <color name="dark_background">#1F1F1F</color>
+    <color name="rich_editor_bottom_toolbar_background">#f1f1f1</color>
+    <color name="rich_editor_text_toolbar_background">#f6f6f6</color>
+    <color name="rich_editor_bottom_toolbar_divider">#1F000000</color>
+    <!--calendar-->
+    <color name="calendar_text_normal">#ff212121</color>
+    <color name="calendar_text_highlighted">@color/calendar_text_normal</color>
+    <color name="calendar_text_disabled">#ccc</color>
+    <color name="calendar_month_day">#767676</color>
+    <color name="calendar_view_animator_dark_theme">@color/mdtp_light_gray</color>
+    <color name="calendar_text_normal_dark_theme">@color/mdtp_white</color>
+    <color name="calendar_month_day_dark_theme">#b4b4b4</color>
+    <color name="calendar_text_disabled_dark_theme">#767676</color>
+    <color name="calendar_text_highlighted_dark_theme">@color/calendar_text_normal_dark_theme
+    </color>
+    <!--write mood-->
+    <color name="write_mood_bottom_action_bar_background">#bffcfcfc</color>
+</resources>

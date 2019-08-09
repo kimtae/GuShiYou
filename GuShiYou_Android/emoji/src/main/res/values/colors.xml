@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="emoji_background">#f6f6f6</color>
+    <color name="emoji_icons">#61000000</color>
+    <color name="emoji_divider">#1F000000</color>
+    <color name="emoji_tabs_bar_background">#F9F9F9</color>
+</resources>

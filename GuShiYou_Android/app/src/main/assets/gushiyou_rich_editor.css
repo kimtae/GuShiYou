@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+#diary_date {
+    display: inline-block;
+    font-size: 14px;
+    margin: 20px 0px 0px 20px;
+}
+
+#diary_weather {
+    display: inline-block;
+    font-size: 14px;
+    margin: 20px 20px 0px 24px;
+}
+
+#diary_location {
+    display: block;
+    font-size: 12px;
+    margin: 12px 0px 0px 20px;
+    vertical-align: bottom;
+}
+
+.ic_location {
+    width: 12px;
+    height: 16px;
+    vertical-align: middle;
+    padding-right: 4px;
+}
+
+#title {
+    font-size: 22px;
+    line-height: 30px;
+    width: 90%;
+    min-height: 30px;
+    max-height: 134px;
+    height: 22px;
+    margin: 20px 0px 0px 17px;
+    resize : none;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: 0;
+    outline: 0;
+}
+
+#splitline {
+    border-top: 1px solid #e6e6e6;
+    margin: 10px 20px 0px 20px;
+}
+

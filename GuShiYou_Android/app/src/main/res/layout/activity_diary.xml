@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-5-12 下午10:45
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_diary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gushiyou.app.main.mvp.ui.activity.DiaryActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/diary_year_height">
+
+            <TextView
+                android:id="@+id/tvYear"
+                style="@style/FlatButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="2017"
+                android:textColor="@color/textPrimary"
+                android:textSize="36dp" />
+        </FrameLayout>
+
+        <ViewSwitcher
+            android:id="@+id/vsCalendar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/calendar_height"
+            android:gravity="center"
+            android:paddingLeft="@dimen/medium_horizontal_margin"
+            android:paddingRight="@dimen/medium_horizontal_margin" />
+
+        <TextView
+            android:id="@+id/tvDiaryCount"
+            style="@style/SecondaryTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/diary_year_height"
+            android:gravity="center"
+            tools:text="共 99 篇" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/flVerifyDiaryPassword"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+</FrameLayout>

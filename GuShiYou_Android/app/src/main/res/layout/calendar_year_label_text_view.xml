@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-5-14 上午12:34
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+<com.gushiyou.app.main.widget.calendar.TextViewWithCircularIndicator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mdtp_month_text_view"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/calendar_year_label_height"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:textColor="@color/colorAccent"
+    android:textSize="@dimen/calendar_year_label_text_size" />

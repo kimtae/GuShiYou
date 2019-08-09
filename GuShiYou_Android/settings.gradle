@@ -1,0 +1,1 @@
+include ':app', ':utilcode', ':dialog', ':material-edittext', ':crop-image', ':pickerview', ':topsnackbar', ':circulareveal', ':transformations', ':badgeviewlib', ':simple-recyclerview', ':emoji', ':emoji-google', ':gesture-views', ':richeditor', ':jsbridge', ':materialdatetimepicker', ':banner'

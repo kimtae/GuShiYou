@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-9-6 下午4:59
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+<com.gigamole.library.ShadowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:sl_shadow_angle="90"
+    app:sl_shadow_color="@color/bottom_shadow"
+    app:sl_shadow_distance="@dimen/shadow_distance"
+    app:sl_shadow_radius="@dimen/shadow_radius"
+    app:sl_shadowed="true">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvStoryCover"
+            style="@style/WhiteItemStyle"
+            android:layout_width="@dimen/write_story_more_actions_width"
+            android:layout_height="@dimen/item_height"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/story_circle_more_actions_horizontal_padding"
+            android:paddingRight="@dimen/story_circle_more_actions_horizontal_padding"
+            android:text="@string/story_cover"
+            android:drawableRight="@drawable/ic_photo_grey_600_18dp"
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/primary_text_size" />
+
+        <TextView
+            android:id="@+id/tvVisibility"
+            style="@style/WhiteItemStyle"
+            android:layout_width="@dimen/write_story_more_actions_width"
+            android:layout_height="@dimen/item_height"
+            android:clickable="true"
+            android:drawableRight="@drawable/ic_public_grey_600_18dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/story_circle_more_actions_horizontal_padding"
+            android:paddingRight="@dimen/story_circle_more_actions_horizontal_padding"
+            android:text="@string/visibility"
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/primary_text_size" />
+    </LinearLayout>
+</com.gigamole.library.ShadowLayout>

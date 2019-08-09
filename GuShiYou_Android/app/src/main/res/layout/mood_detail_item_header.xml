@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-8-25 下午6:18
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin">
+
+    <View
+        style="@style/DividerStyle"
+        android:layout_marginBottom="@dimen/small_vertical_margin" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/SmallestTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mood_detail_item_header_height"
+        android:gravity="center_vertical"
+        android:maxLines="1" />
+
+</LinearLayout>

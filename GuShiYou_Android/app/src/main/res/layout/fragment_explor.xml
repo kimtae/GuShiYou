@@ -1,0 +1,72 @@
+<!--
+  ~ Created by 邱志立 on 17-2-26 下午12:28
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.gushiyou.app.main.mvp.ui.fragment.ExplorFragment">
+
+    <ezy.ui.view.BannerView
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey_800"
+        app:bvAspectRatio="0.38888889"
+        app:bvIndicatorColor="@color/grey"
+        app:bvIndicatorColorSelected="@color/colorAccent" />
+
+    <View style="@style/ItemBottomShadowStyle" />
+
+    <View
+        style="@style/DividerStyle"
+        android:layout_marginTop="@dimen/activity_vertical_margin" />
+
+    <FrameLayout
+        android:id="@+id/flStoryCircl"
+        style="@style/ItemStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height">
+
+        <TextView
+            style="@style/PrimaryTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:drawableLeft="@drawable/ic_toys_grey_600_24dp"
+            android:drawablePadding="@dimen/activity_horizontal_margin"
+            android:gravity="center_vertical"
+            android:text="@string/story_circle" />
+    </FrameLayout>
+
+    <View style="@style/ItemBottomShadowStyle" />
+
+    <View
+        style="@style/DividerStyle"
+        android:layout_marginTop="@dimen/activity_vertical_margin" />
+
+    <FrameLayout
+        android:id="@+id/flWanderingStory"
+        style="@style/ItemStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height">
+
+        <TextView
+            style="@style/PrimaryTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:drawableLeft="@drawable/ic_near_me_grey_600_24dp"
+            android:drawablePadding="@dimen/activity_horizontal_margin"
+            android:gravity="center_vertical"
+            android:text="@string/wandering_mark" />
+    </FrameLayout>
+
+    <View style="@style/ItemBottomShadowStyle" />
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-9-4 下午9:00
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menuDrafts"
+        android:icon="@drawable/ic_drafts_white_24dp"
+        android:title="@string/drafts"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menuSend"
+        android:icon="@drawable/ic_send_grey_400_24dp"
+        android:title="@string/send"
+        app:showAsAction="always" />
+</menu>

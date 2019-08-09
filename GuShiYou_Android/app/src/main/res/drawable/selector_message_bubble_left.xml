@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by 邱志立 on 17-3-29 下午5:42
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/bg_message_bubble_left_pressed" android:state_pressed="true" />
+    <item android:drawable="@drawable/bg_message_bubble_left" />
+</selector>

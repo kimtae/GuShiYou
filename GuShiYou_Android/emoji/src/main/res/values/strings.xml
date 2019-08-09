@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by 邱志立 on 17-3-28 上午12:08
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<resources>
+    <string name="no_recent_emoji">暂无最近表情</string>
+</resources>

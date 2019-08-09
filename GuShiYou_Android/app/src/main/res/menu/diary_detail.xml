@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-5-18 上午10:22
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menuModify"
+        android:icon="@drawable/ic_mode_edit_white_24dp"
+        android:title="@string/modify"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menuDelete"
+        android:icon="@drawable/ic_delete_white_24dp"
+        android:title="@string/delete"
+        app:showAsAction="never" />
+</menu>

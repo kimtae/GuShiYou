@@ -1,0 +1,184 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/activity_background</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionBarPopupTheme">@color/colorPrimary</item>
+        <item name="md_title_color">@color/textPrimary</item>
+        <item name="md_item_color">@color/textPrimary</item>
+        <item name="md_content_color">@color/textPrimary</item>
+        <item name="md_link_color">@color/link</item>
+    </style>
+
+    <style name="ArticleAppTheme" parent="AppTheme">
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="NoActionbarAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/activity_background</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="md_title_color">@color/textPrimary</item>
+        <item name="md_item_color">@color/textPrimary</item>
+        <item name="md_content_color">@color/textPrimary</item>
+        <item name="md_link_color">@color/link</item>
+    </style>
+
+    <style name="NoActionbarDarkAppTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@color/activity_background</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="md_title_color">@color/textPrimary</item>
+        <item name="md_item_color">@color/textPrimary</item>
+        <item name="md_content_color">@color/textPrimary</item>
+        <item name="md_link_color">@color/link</item>
+    </style>
+
+    <style name="DarkToolbarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="LightToolbarTheme" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="LauncherTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@drawable/bg_launcher</item>
+    </style>
+
+    <style name="PrimaryTextStyle">
+        <item name="android:textSize">@dimen/primary_text_size</item>
+        <item name="android:textColor">@color/textPrimary</item>
+    </style>
+
+    <style name="PrimaryTextInverseStyle">
+        <item name="android:textSize">@dimen/primary_text_size</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="SecondaryTextStyle">
+        <item name="android:textSize">@dimen/secondary_text_size</item>
+        <item name="android:textColor">@color/textSecondary</item>
+    </style>
+
+    <style name="SmallestTextStyle">
+        <item name="android:textSize">@dimen/smallest_text_size</item>
+        <item name="android:textColor">@color/textSecondary</item>
+    </style>
+
+    <style name="SmallestTextInverseStyle">
+        <item name="android:textSize">@dimen/smallest_text_size</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="MainBottomBarSmallestTextStyle">
+        <item name="android:textSize">@dimen/smallest_text_size</item>
+        <item name="android:textColor">@drawable/selector_main_bottom_bar_textcolor</item>
+    </style>
+
+    <style name="SecondaryTextInverseStyle">
+        <item name="android:textSize">@dimen/secondary_text_size</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="SmallItemNameTextStyle">
+        <item name="android:textSize">@dimen/secondary_text_size</item>
+        <item name="android:textColor">@color/textPrimary</item>
+    </style>
+
+    <style name="SmallItemContentTextStyle">
+        <item name="android:textSize">@dimen/secondary_text_size</item>
+        <item name="android:textColor">@color/textSecondary</item>
+    </style>
+
+    <style name="ButtonStyle">
+        <item name="android:background">@drawable/selector_button_primary</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="FlatButtonStyle">
+        <item name="android:background">@drawable/selector_flat_button</item>
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="ItemStyle">
+        <item name="android:background">@drawable/selector_item</item>
+    </style>
+
+    <style name="WhiteItemStyle">
+        <item name="android:background">@drawable/selector_white_item</item>
+    </style>
+
+    <style name="DividerStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/divider_height</item>
+        <item name="android:background">@color/dividerColor</item>
+    </style>
+
+    <style name="ItemBottomShadowStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/item_bottom_shadow_height</item>
+        <item name="android:background">@drawable/dropshadow_bottom</item>
+    </style>
+
+    <style name="BottomShadowStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/bottom_shadow_height</item>
+        <item name="android:background">@drawable/dropshadow_bottom</item>
+    </style>
+
+    <style name="TopShadowLightStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/top_shadow_height</item>
+        <item name="android:background">@drawable/dropshadow_top_light</item>
+    </style>
+
+    <style name="TopShadowDarkStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/top_shadow_height</item>
+        <item name="android:background">@drawable/dropshadow_top_dark</item>
+    </style>
+
+    <style name="NormalDarkButtonTheme">
+        <item name="colorButtonNormal">@drawable/selector_btn</item>
+        <item name="colorControlHighlight">@color/black_pressed</item>
+        <item name="android:textSize">@dimen/primary_text_size</item>
+        <item name="android:textColor">@color/textPrimary</item>
+    </style>
+
+    <style name="WhiteButtonTheme">
+        <item name="colorButtonNormal">@drawable/selector_btn_white</item>
+        <item name="colorControlHighlight">@color/black_pressed</item>
+        <item name="android:textSize">@dimen/primary_text_size</item>
+        <item name="android:textColor">@color/textPrimary</item>
+    </style>
+
+    <style name="CropPictureStyle" parent="Theme.AppCompat.Light.NoActionBar"></style>
+
+    <style name="BottomKeyboardAnimation">
+        <item name="android:windowEnterAnimation">@anim/show_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/hide_to_bottom</item>
+    </style>
+
+    <style name="RichEditorToolbarItemStyle" parent="Base.Widget.AppCompat.ActionButton.CloseMode">
+        <item name="android:layout_width">@dimen/rich_editor_bar_item_width</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+    <style name="CropPictureRatioItemStyle" parent="Widget.AppCompat.ActionButton">
+        <item name="android:layout_width">@dimen/crop_picture_ratio_item_width</item>
+        <item name="android:layout_height">@dimen/bottom_toolbar_height</item>
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@drawable/crop_picture_ratio_item_text_color</item>
+        <item name="android:textSize">@dimen/primary_text_size</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>

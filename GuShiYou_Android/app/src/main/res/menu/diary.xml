@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-5-21 下午4:42
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menuDiaryPassword"
+        android:icon="@drawable/ic_lock_outline_white_24dp"
+        android:title="@string/diary_password"
+        app:showAsAction="always" />
+
+</menu>

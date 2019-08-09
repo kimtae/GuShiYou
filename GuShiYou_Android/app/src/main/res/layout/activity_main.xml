@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-2-26 下午12:28
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gushiyou.app.main.mvp.ui.activity.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/Widget.AppCompat.Toolbar.Button.Navigation"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/DarkToolbarTheme" />
+
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rgBottomBar"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <View
+            style="@style/BottomShadowStyle"
+            android:layout_gravity="top" />
+
+        <View
+            style="@style/TopShadowLightStyle"
+            android:layout_gravity="bottom" />
+    </FrameLayout>
+
+
+    <RadioGroup
+        android:id="@+id/rgBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_bottom_bar_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey_white"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/rbStory"
+            style="@style/MainBottomBarSmallestTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_story"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/main_bottom_bar_btns_padding_top"
+            android:text="@string/story" />
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/rbFriend"
+            style="@style/MainBottomBarSmallestTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_friend"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/main_bottom_bar_btns_padding_top"
+            android:text="@string/friend" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fabWrite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:src="@drawable/ic_create_white_24dp"
+                app:backgroundTint="@color/grey_600"
+                app:fabSize="mini" />
+        </FrameLayout>
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/rbExplor"
+            style="@style/MainBottomBarSmallestTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_explor"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/main_bottom_bar_btns_padding_top"
+            android:text="@string/explor" />
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/rbMine"
+            style="@style/MainBottomBarSmallestTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_mine"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/main_bottom_bar_btns_padding_top"
+            android:text="@string/mine" />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/rlCover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <com.gigamole.library.ShadowLayout
+            android:id="@+id/slDiary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            app:sl_shadow_angle="90"
+            app:sl_shadow_color="@color/bottom_shadow"
+            app:sl_shadow_distance="@dimen/write_action_btn_shadow_distance"
+            app:sl_shadow_radius="@dimen/write_action_btn_shadow_radius"
+            app:sl_shadowed="true">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tvDiary"
+                android:layout_width="@dimen/main_btn_write"
+                android:layout_height="@dimen/main_btn_write"
+                android:background="@drawable/bg_diary"
+                android:drawableTop="@drawable/ic_event_note_white_36dp"
+                android:gravity="center"
+                android:padding="@dimen/main_write_btns_padding"
+                android:text="@string/diary"
+                android:textColor="@color/white"
+                android:textSize="@dimen/secondary_text_size" />
+        </com.gigamole.library.ShadowLayout>
+
+        <com.gigamole.library.ShadowLayout
+            android:id="@+id/slStory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            app:sl_shadow_angle="90"
+            app:sl_shadow_color="@color/bottom_shadow"
+            app:sl_shadow_distance="@dimen/write_action_btn_shadow_distance"
+            app:sl_shadow_radius="@dimen/write_action_btn_shadow_radius"
+            app:sl_shadowed="true">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tvStory"
+                android:layout_width="@dimen/main_btn_write"
+                android:layout_height="@dimen/main_btn_write"
+                android:background="@drawable/bg_story"
+                android:drawableTop="@drawable/ic_nature_people_white_36dp"
+                android:gravity="center"
+                android:padding="@dimen/main_write_btns_padding"
+                android:text="@string/story"
+                android:textColor="@color/white"
+                android:textSize="@dimen/secondary_text_size" />
+        </com.gigamole.library.ShadowLayout>
+
+        <com.gigamole.library.ShadowLayout
+            android:id="@+id/slMood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            app:sl_shadow_angle="90"
+            app:sl_shadow_color="@color/bottom_shadow"
+            app:sl_shadow_distance="@dimen/write_action_btn_shadow_distance"
+            app:sl_shadow_radius="@dimen/write_action_btn_shadow_radius"
+            app:sl_shadowed="true">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tvMood"
+                android:layout_width="@dimen/main_btn_write"
+                android:layout_height="@dimen/main_btn_write"
+                android:background="@drawable/bg_mood"
+                android:drawableTop="@drawable/ic_mood_white_36dp"
+                android:gravity="center"
+                android:padding="@dimen/main_write_btns_padding"
+                android:text="@string/mood"
+                android:textColor="@color/white"
+                android:textSize="@dimen/secondary_text_size" />
+        </com.gigamole.library.ShadowLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/main_bottom_bar_height"
+            android:layout_alignParentBottom="true">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fabClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:src="@drawable/ic_close_white_24dp"
+                app:backgroundTint="@drawable/selector_close"
+                app:fabSize="mini" />
+        </FrameLayout>
+    </RelativeLayout>
+</RelativeLayout>

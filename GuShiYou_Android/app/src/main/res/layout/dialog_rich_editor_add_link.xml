@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-5-1 下午8:39
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/etLinkName"
+        style="@style/PrimaryTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/link_name"
+        android:inputType="text"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:textCursorDrawable="@drawable/text_cursor"
+        app:met_clearButton="true"
+        app:met_floatingLabel="highlight"
+        app:met_maxCharacters="20"
+        app:met_minCharacters="1"
+        app:met_primaryColor="@color/colorAccent"
+        app:met_textColor="@color/textPrimary" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/etLinkAddress"
+        style="@style/PrimaryTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/link_address"
+        android:inputType="text"
+        android:maxLength="512"
+        android:maxLines="1"
+        android:textCursorDrawable="@drawable/text_cursor"
+        app:met_clearButton="true"
+        app:met_floatingLabel="highlight"
+        app:met_maxCharacters="512"
+        app:met_minCharacters="3"
+        app:met_primaryColor="@color/colorAccent"
+        app:met_textColor="@color/textPrimary" />
+
+</LinearLayout>

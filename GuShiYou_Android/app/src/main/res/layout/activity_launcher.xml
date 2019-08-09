@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by 邱志立 on 17-2-26 下午12:28
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_launcher"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.gushiyou.app.main.mvp.ui.activity.LauncherActivity">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/cat"
+        android:layout_width="match_parent"
+        android:layout_height="219dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/cat" />
+
+    <LinearLayout
+        android:id="@+id/lLayoutBottomButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnRegister"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height_normal"
+            android:layout_weight="1"
+            android:text="@string/register"
+            android:theme="@style/NormalDarkButtonTheme" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnLogin"
+            style="@style/PrimaryTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height_normal"
+            android:layout_weight="1"
+            android:text="@string/login" />
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/moon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/moon" />
+</RelativeLayout>

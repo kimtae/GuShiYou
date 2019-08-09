@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-3-4 下午12:02
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rlTopMaiginView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/medium_vertical_margin" />
+
+        <View
+            style="@style/DividerStyle"
+            android:layout_below="@+id/view" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlContent"
+        style="@style/ItemStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/friends_item_height"
+        android:layout_below="@+id/rlTopMaiginView">
+
+        <ImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="@dimen/friends_item_avatar_size"
+            android:layout_height="@dimen/friends_item_avatar_size"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            tools:src="@drawable/ic_default_portrait_small" />
+
+        <TextView
+            android:id="@+id/tvName"
+            style="@style/PrimaryTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_toRightOf="@+id/ivAvatar"
+            android:ellipsize="end"
+            android:maxLines="1" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlContent"
+        android:background="@color/grey_white">
+
+        <View
+            android:id="@+id/divider"
+            style="@style/DividerStyle"
+            android:layout_marginLeft="@dimen/friends_item_divider_margin_left"
+            android:layout_marginRight="@dimen/friends_item_divider_margin_right" />
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-3-5 上午10:27
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/text_bg_translucent" />
+    <corners android:radius="@dimen/round_corner_size" />
+    <size
+        android:width="@dimen/floating_letter_bg_size"
+        android:height="@dimen/floating_letter_bg_size" />
+</shape>

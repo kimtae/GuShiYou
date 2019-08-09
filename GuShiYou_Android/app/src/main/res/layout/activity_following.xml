@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-7-20 下午9:35
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_following"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gushiyou.app.main.mvp.ui.activity.FollowingActivity">
+
+    <com.afollestad.materialdialogs.common.progress.ProgressWheel xmlns:wheel="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/progressWheel"
+        android:layout_width="@dimen/small_circle_progress"
+        android:layout_height="@dimen/small_circle_progress"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/progressWheel_margin_top"
+        wheel:matProg_barColor="@color/colorAccent"
+        wheel:matProg_barWidth="@dimen/small_progress_bar_width"
+        wheel:matProg_progressIndeterminate="true" />
+
+    <com.jaychang.srv.SimpleRecyclerView
+        android:id="@+id/srvFollowings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        app:srv_dividerColor="@color/dividerColor"
+        app:srv_dividerPaddingLeft="@dimen/following_follower_item_divider_margin_left"
+        app:srv_emptyStateView="@layout/empty_view"
+        app:srv_layoutMode="linearVertical"
+        app:srv_loadMoreView="@layout/loading_view"
+        app:srv_showDivider="true" />
+</FrameLayout>

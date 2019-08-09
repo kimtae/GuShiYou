@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-2-26 下午12:28
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gushiyou.app.main.mvp.ui.activity.SearchActivity">
+
+    <ViewFlipper
+        android:id="@+id/viewFlipper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <com.afollestad.materialdialogs.common.progress.ProgressWheel xmlns:wheel="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/progressWheel"
+                android:layout_width="@dimen/small_circle_progress"
+                android:layout_height="@dimen/small_circle_progress"
+                wheel:matProg_barColor="@color/colorAccent"
+                wheel:matProg_barWidth="@dimen/small_progress_bar_width"
+                wheel:matProg_progressIndeterminate="true" />
+
+            <TextView
+                android:id="@+id/tvHint"
+                style="@style/SecondaryTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/medium_horizontal_margin"
+                android:layout_toRightOf="@+id/progressWheel"
+                android:text="@string/searching_friend" />
+        </RelativeLayout>
+
+        <TextView
+            style="@style/SecondaryTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/the_user_not_exists" />
+
+        <com.jaychang.srv.SimpleRecyclerView
+            android:id="@+id/srvUsers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            app:srv_dividerColor="@color/dividerColor"
+            app:srv_dividerPaddingLeft="@dimen/search_user_item_divider_margin_left"
+            app:srv_layoutMode="linearVertical"
+            app:srv_showDivider="true" />
+    </ViewFlipper>
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-4-4 下午6:31
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tvAlert"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/bg_message_alert"
+    android:clickable="true"
+    android:gravity="center"
+    android:maxLines="1"
+    android:textColor="@color/white"
+    android:textSize="@dimen/message_hint_text_size"
+    android:visibility="gone"
+    tools:text="提示警告" />

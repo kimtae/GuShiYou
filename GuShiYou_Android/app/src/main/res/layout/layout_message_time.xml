@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-3-26 下午4:24
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tvTime"
+    style="@style/SmallestTextInverseStyle"
+    android:background="@drawable/bg_chat_time"
+    android:clickable="true"
+    android:gravity="center"
+    android:maxLines="1"
+    android:visibility="gone" />

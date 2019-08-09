@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-8-28 上午1:21
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/WhiteItemStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <ImageView
+        android:id="@+id/ivAvatar"
+        android:layout_width="@dimen/mood_detail_favour_avatar_size"
+        android:layout_height="@dimen/mood_detail_favour_avatar_size"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/medium_horizontal_margin">
+
+        <TextView
+            android:id="@+id/tvPseudonym"
+            style="@style/SecondaryTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingBottom="@dimen/small_vertical_margin"
+            tools:text="笔名" />
+
+        <TextView
+            android:id="@+id/tvFavour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:clickable="true"
+            android:drawableLeft="@drawable/selector_story_favour"
+            android:drawablePadding="@dimen/small_horizontal_margin"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/tvReply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvPseudonym"
+            android:paddingBottom="@dimen/small_vertical_margin"
+            android:text="@string/reply_somebody"
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/story_circle_text_textsize"
+            android:visibility="gone" />
+
+        <com.vanniktech.emoji.EmojiTextView
+            android:id="@+id/etvText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvReply"
+            android:ellipsize="end"
+            android:lineSpacingExtra="@dimen/story_text_lineSpacingExtra"
+            android:paddingBottom="@dimen/small_vertical_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/story_circle_text_textsize"
+            app:emojiSize="@dimen/story_circle_emoji_size"
+            tools:text="心静自然凉" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etvText"
+            android:paddingTop="@dimen/small_vertical_margin"
+            android:textColor="@color/textSecondary"
+            android:textSize="10dp"
+            tools:text="2017年8月25日 18:16" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/tvTime"
+            android:layout_marginRight="@dimen/mood_detail_leaving_message_actionbar_margin_right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/small_vertical_margin"
+                android:text="@string/delete"
+                android:textColor="@color/link"
+                android:textSize="@dimen/smallest_text_size"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/mood_detail_leaving_message_status_margin_left"
+                android:padding="@dimen/small_vertical_margin"
+                android:textColor="@color/link"
+                android:textSize="@dimen/smallest_text_size"
+                android:visibility="gone"
+                tools:text="公开" />
+        </LinearLayout>
+
+        <View
+            style="@style/DividerStyle"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/tvTime"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin" />
+    </RelativeLayout>
+</LinearLayout>

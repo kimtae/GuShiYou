@@ -1,0 +1,182 @@
+@import '../less/common.less';
+
+.last-login-time {
+  display: block;
+  padding: 18px 21px 14px;
+  font-size: 13px;
+}
+
+@media(max-width:400px) {
+  .last-login-time-label {
+    display: none;
+  }
+}
+@media(max-width:@screen-sm-min) {
+  .last-login-time {
+    padding: 15px 21px 14px;
+  }
+}
+
+.logo-lg,.logo-mini {
+  color: @accent-color;
+}
+
+.main-header,.logo, .navbar,.navbar-static-top, a.sidebar-toggle, a.dropdown-toggle {
+    height: 50px !important;
+}
+
+a.sidebar-toggle,a.sidebar-toggle::before {
+  font-size: 14px;
+}
+
+.skin-yellow .main-header .navbar,.logo,.user-header{
+    color:@accent-color !important;
+    background-color:@primary-color !important;
+}
+
+.user-menu span {
+  font-size: 14px;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.logo:hover,.sidebar-toggle:hover,.dropdown-toggle:hover {
+  background-color: @secondary-color !important;
+}
+
+.wrapper,
+.main-sidebar,
+.left-side {
+  background-color: @primary-color !important;
+}
+
+.sidebar-menu > li:hover > a,
+.sidebar-menu > li.active > a,
+.treeview-menu > li:hover > a,
+.treeview-menu > li:active > a {
+  color: #fff !important;
+  background:@secondary-color !important;
+  border-left-color:@accent-color !important;
+}
+
+.sidebar-menu > li > .treeview-menu {
+  background: #323232 !important;
+}
+
+.sidebar a {
+  font-size: 14px !important;
+  color: #c1c1c1 !important;
+}
+
+.sidebar-menu > li.header {
+  color: #a1a1a1 !important;
+  background: #1b1b1b !important;
+}
+
+.user-header {
+  height: 150px !important;
+}
+
+@shadowColor: rgba(0, 0, 0, .5);
+@ShadowRadius:3px;
+
+@XOffsetBottom:0;
+@YOffsetBottom:2px;
+.shadow-bottom{  
+ -webkit-box-shadow:@XOffsetBottom @YOffsetBottom @ShadowRadius @shadowColor;  
+  -moz-box-shadow:@XOffsetBottom @YOffsetBottom @ShadowRadius @shadowColor;  
+  box-shadow:@XOffsetBottom @YOffsetBottom @ShadowRadius @shadowColor;   
+}
+
+@XOffsetRight:2px;
+@YOffsetRight:0;
+.shadow-Right{  
+ -webkit-box-shadow:@XOffsetRight @YOffsetRight @ShadowRadius @shadowColor;  
+  -moz-box-shadow:@XOffsetRight @YOffsetRight @ShadowRadius @shadowColor;  
+  box-shadow:@XOffsetRight @YOffsetRight @ShadowRadius @shadowColor;   
+}
+
+@ShadowRadiusAround:10px;
+@XOffsetAround:0;
+@YOffsetAround:0;
+.shadow{  
+ -webkit-box-shadow:@XOffsetAround @YOffsetAround @ShadowRadiusAround @shadowColor;  
+  -moz-box-shadow:@XOffsetAround @YOffsetAround @ShadowRadiusAround @shadowColor;  
+  box-shadow:@XOffsetAround @YOffsetAround @ShadowRadiusAround @shadowColor;   
+}
+
+/*.wrapper {
+  position: absolute !important;
+  overflow-y: auto;
+  right: 0;
+  left: 0;
+  padding-top: 50px;
+}
+.main-header {
+  position: fixed !important;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+@media (max-width: 767px) {
+  .content-wrapper {
+    padding-top: 50px;
+  }
+}
+
+.main-footer {
+  position: absolute !important;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}*/
+
+.user-footer .btn {
+    display: inline-block !important;
+    padding: 6px 12px !important;
+    margin-bottom: 0 !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 1.42857143;
+    text-align: center !important;
+    white-space: nowrap !important;
+    vertical-align: middle !important;
+    -ms-touch-action: manipulation !important;
+    touch-action: manipulation !important;
+    cursor: pointer !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    background-image: none !important;
+    border: 1px solid transparent !important;
+    -webkit-transition: border .25s linear,color .25s linear,background-color .25s linear !important;
+    transition: border .25s linear,color .25s linear,background-color .25s linear !important;
+    -webkit-font-smoothing: subpixel-antialiased !important;
+}
+
+.user-footer .btn-default {
+    background-color: #f4f4f4 !important;
+    color: #444 !important;
+    border-color: #ddd !important;
+}
+
+.user-footer .btn-default:hover, .btn-default:active, .btn-default.hover {
+    background-color: #e7e7e7 !important;
+    border-color: #adadad !important;
+}
+
+.sidebar-menu li > a > .pull-right-container > .fa-angle-left {
+   -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.sidebar-menu li.active > a > .pull-right-container > .fa-angle-left {
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}

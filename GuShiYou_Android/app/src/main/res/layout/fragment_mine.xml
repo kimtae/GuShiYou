@@ -1,0 +1,319 @@
+<!--
+  ~ Created by 邱志立 on 17-2-26 下午12:28
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<com.liaoinstan.springview.widget.SpringView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/springView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    tools:context="com.gushiyou.app.main.mvp.ui.fragment.MineFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:orientation="vertical">
+
+            <View style="@style/DividerStyle" />
+
+            <RelativeLayout
+                android:id="@+id/rlProfile"
+                style="@style/ItemStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/mine_card_margin_horizontal"
+                android:layout_marginRight="@dimen/mine_card_margin_horizontal"
+                android:clickable="true"
+                android:paddingBottom="@dimen/mine_profile_card_padding"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/mine_profile_card_padding">
+
+                <ImageView
+                    android:id="@+id/ivAvatar"
+                    android:layout_width="@dimen/mine_avatar_size"
+                    android:layout_height="@dimen/mine_avatar_size"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/ic_default_portrait" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_toRightOf="@+id/ivAvatar">
+
+                    <TextView
+                        android:id="@+id/tvPseudonym"
+                        style="@style/PrimaryTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        tools:text="笔名" />
+
+                    <TextView
+                        android:id="@+id/tvGuShiHao"
+                        style="@style/SecondaryTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvPseudonym"
+                        android:layout_marginTop="@dimen/mine_profile_card_text_margin"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        tools:text="故事号：gushihao" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View style="@style/ItemBottomShadowStyle" />
+
+            <View
+                style="@style/DividerStyle"
+                android:layout_marginTop="@dimen/medium_vertical_margin" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rlStory"
+                    style="@style/ItemStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/bottom_toolbar_height"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvStoryCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:maxLines="1"
+                        android:text="0"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/smallest_text_size" />
+
+                    <TextView
+                        style="@style/SmallestTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvStoryCount"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/mine_card_story_text_padding"
+                        android:text="@string/story"
+                        android:textColor="@color/textSecondary"
+                        android:textSize="@dimen/smallest_text_size" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlFollowing"
+                    style="@style/ItemStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/bottom_toolbar_height"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvfollowingCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:maxLines="1"
+                        android:text="0"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/smallest_text_size" />
+
+                    <TextView
+                        style="@style/SmallestTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvfollowingCount"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/mine_card_story_text_padding"
+                        android:text="@string/following"
+                        android:textColor="@color/textSecondary"
+                        android:textSize="@dimen/smallest_text_size" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlFollower"
+                    style="@style/ItemStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/bottom_toolbar_height"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvFollowerCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:maxLines="1"
+                        android:text="0"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/smallest_text_size" />
+
+                    <TextView
+                        style="@style/SmallestTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvFollowerCount"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/mine_card_story_text_padding"
+                        android:text="@string/follower"
+                        android:textColor="@color/textSecondary"
+                        android:textSize="@dimen/smallest_text_size" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View style="@style/ItemBottomShadowStyle" />
+
+            <View
+                style="@style/DividerStyle"
+                android:layout_marginTop="@dimen/medium_vertical_margin" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/flDiary"
+                    style="@style/ItemStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_height">
+
+                    <TextView
+                        android:id="@+id/tvDiary"
+                        style="@style/PrimaryTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:drawableLeft="@drawable/ic_event_note_grey_600_24dp"
+                        android:drawablePadding="@dimen/activity_horizontal_margin"
+                        android:gravity="center_vertical"
+                        android:text="@string/diary" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/grey_white">
+
+                    <View
+                        style="@style/DividerStyle"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/flCollection"
+                    style="@style/ItemStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_height">
+
+                    <TextView
+                        android:id="@+id/tvCollection"
+                        style="@style/PrimaryTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:drawableLeft="@drawable/ic_collection"
+                        android:drawablePadding="@dimen/activity_horizontal_margin"
+                        android:gravity="center_vertical"
+                        android:text="@string/collect" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <View style="@style/ItemBottomShadowStyle" />
+
+            <View
+                style="@style/DividerStyle"
+                android:layout_marginTop="@dimen/medium_vertical_margin" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/flNight"
+                    style="@style/ItemStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_height">
+
+                    <TextView
+                        android:id="@+id/tvNight"
+                        style="@style/PrimaryTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:drawableLeft="@drawable/ic_night"
+                        android:drawablePadding="@dimen/activity_horizontal_margin"
+                        android:gravity="center_vertical"
+                        android:text="@string/night" />
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/switchNight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/grey_white">
+
+                    <View
+                        style="@style/DividerStyle"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/flSettings"
+                    style="@style/ItemStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_height">
+
+                    <TextView
+                        android:id="@+id/tvSettings"
+                        style="@style/PrimaryTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:drawableLeft="@drawable/ic_settings_grey_600_24dp"
+                        android:drawablePadding="@dimen/activity_horizontal_margin"
+                        android:gravity="center_vertical"
+                        android:text="@string/settings" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <View style="@style/ItemBottomShadowStyle" />
+        </LinearLayout>
+    </ScrollView>
+</com.liaoinstan.springview.widget.SpringView>

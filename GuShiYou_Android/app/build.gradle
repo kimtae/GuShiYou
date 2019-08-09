@@ -1,0 +1,119 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao' // greenDAO
+apply plugin: 'realm-android'
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    defaultConfig {
+        applicationId "com.gushiyou.app"
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true // 解决方法数限制的问题
+        ndk {
+            // 设置支持的SO库架构（网易云信）
+            abiFilters "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
+        }
+    }
+
+    signingConfigs {
+        release {
+            keyAlias rootProject.ext.release["keyAlias"]
+            keyPassword rootProject.ext.release["keyPassword"]
+            storeFile rootProject.ext.release["storeFile"]
+            storePassword rootProject.ext.release["storePassword"]
+        }
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "LOG_ENABLED", "true"
+            signingConfig signingConfigs.release
+        }
+
+        release {
+            buildConfigField "boolean", "LOG_ENABLED", "false"
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    dexOptions {
+        preDexLibraries false
+        jumboMode true
+        javaMaxHeapSize "4g"
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile(rootProject.ext.dependencies["espresso-core"], {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile rootProject.ext.dependencies["appcompat-v7"]
+    testCompile rootProject.ext.dependencies["junit"]
+    // 解决方法数限制的问题
+    compile 'com.android.support:multidex:'
+    compile rootProject.ext.dependencies["timber"]
+    compile rootProject.ext.dependencies["dagger2"]
+    annotationProcessor rootProject.ext.dependencies["dagger2-apt-compiler"]
+    compile rootProject.ext.dependencies["rxandroid"]
+    compile rootProject.ext.dependencies["rxjava"]
+    compile rootProject.ext.dependencies["rxlifecycle"]
+    compile rootProject.ext.dependencies["rxlifecycle-components"]
+    compile rootProject.ext.dependencies["rxpermissions"]
+    compile rootProject.ext.dependencies["retrofit"]
+    compile rootProject.ext.dependencies["retrofit-converter-gson"]
+    compile rootProject.ext.dependencies["retrofit-adapter-rxjava"]
+    compile rootProject.ext.dependencies["logging-interceptor"]
+    compile rootProject.ext.dependencies["butter-knife"]
+    compile rootProject.ext.dependencies["butter-knife-processor"]
+    debugCompile rootProject.ext.dependencies["leakcanary-debug"]
+    releaseCompile rootProject.ext.dependencies["leakcanary-release"]
+    testCompile rootProject.ext.dependencies["leakcanary-release"]
+    compile rootProject.ext.dependencies["glide"]
+    compile rootProject.ext.dependencies["recyclerview-v7"]
+    compile rootProject.ext.dependencies["design"]
+    compile rootProject.ext.dependencies["support-v4"]
+    compile rootProject.ext.dependencies["cardview-v7"]
+    compile rootProject.ext.dependencies["autolayout"]
+    compile rootProject.ext.dependencies["rounded-imageview"]
+    compile rootProject.ext.dependencies["shadowlayout"]
+    compile rootProject.ext.dependencies["nimlib"]
+    compile rootProject.ext.dependencies["springview"]
+    compile rootProject.ext.dependencies["trigger"]
+    compile rootProject.ext.dependencies["greendao"]
+    compile rootProject.ext.dependencies["sqlcipher"]
+    compile files('libs/AMap2DMap_4.2.0_AMapSearch_4.0.0_AMapLocation_3.3.0_20170120.jar')
+    compile project(':utilcode')
+    compile project(':topsnackbar')
+    compile project(':dialog')
+    compile project(':material-edittext')
+    compile project(':crop-image')
+    compile project(':pickerview')
+    compile project(':circulareveal')
+    compile project(':transformations')
+    compile project(':badgeviewlib')
+    compile project(':simple-recyclerview')
+    compile project(':emoji')
+    compile project(':emoji-google')
+    compile project(':gesture-views')
+    compile project(':richeditor')
+    compile project(':banner')
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta5'
+}

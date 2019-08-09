@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-3-18 下午11:46
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.mvp.ui.activity.ChatActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/Widget.AppCompat.Toolbar.Button.Navigation"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/DarkToolbarTheme" />
+
+    <LinearLayout
+        android:id="@+id/activity_chat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical"
+        tools:context="com.gushiyou.app.main.mvp.ui.activity.ChatActivity">
+
+        <FrameLayout
+            android:id="@+id/flMessages"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <com.jaychang.srv.SimpleRecyclerView
+                android:id="@+id/srvMessages"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:scrollbars="vertical"
+                app:srv_emptyStateView="@layout/messages_empty_view"
+                app:srv_layoutMode="linearVertical"
+                app:srv_loadMoreView="@layout/loading_view"
+                app:srv_verticalSpacing="@dimen/activity_vertical_margin" />
+
+            <View
+                style="@style/BottomShadowStyle"
+                android:layout_gravity="top" />
+
+            <View
+                style="@style/TopShadowLightStyle"
+                android:layout_gravity="bottom" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/llEditBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/grey_white"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <com.vanniktech.emoji.EmojiEditText
+                android:id="@+id/eetEditText"
+                style="@style/PrimaryTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/medium_vertical_margin"
+                android:layout_marginLeft="@dimen/medium_horizontal_margin"
+                android:layout_marginRight="@dimen/medium_horizontal_margin"
+                android:layout_marginTop="@dimen/medium_vertical_margin"
+                android:layout_weight="1"
+                android:background="@drawable/bg_input_bar_edittext"
+                android:imeOptions="actionSend"
+                android:inputType="textMultiLine"
+                android:lineSpacingExtra="@dimen/message_text_lineSpacingExtra"
+                android:maxLines="4"
+                android:minHeight="@dimen/chat_input_panel_height"
+                app:emojiSize="@dimen/primary_emoji_size" />
+
+            <ImageView
+                android:id="@+id/ivInsertEmoticon"
+                style="@style/Base.Widget.AppCompat.ActionButton.CloseMode"
+                android:layout_width="@dimen/chat_input_panel_button_small"
+                android:layout_height="@dimen/chat_input_panel_button_small"
+                android:clickable="true"
+                android:src="@drawable/ic_insert_emoticon_grey_600_24dp" />
+
+            <ViewSwitcher
+                android:id="@+id/vsSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivMoreActions"
+                    style="@style/Base.Widget.AppCompat.ActionButton.CloseMode"
+                    android:layout_width="@dimen/chat_input_panel_button_big"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_add_grey_600_24dp" />
+
+                <ImageView
+                    android:id="@+id/ivSend"
+                    style="@style/Base.Widget.AppCompat.ActionButton.CloseMode"
+                    android:layout_width="@dimen/chat_input_panel_button_big"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_send_amber_500_24dp" />
+            </ViewSwitcher>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/flEditBarBottomMargin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/popup_chat_input_more_actions_height"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/transitionBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dark_background"
+        android:visibility="invisible" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/transitionPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-8-25 下午7:51
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/ivAvatar"
+android:layout_width="@dimen/mood_detail_favour_avatar_size"
+android:layout_height="@dimen/mood_detail_favour_avatar_size"
+android:layout_marginBottom="@dimen/mood_detail_favour_avatar_bottom_margin" />

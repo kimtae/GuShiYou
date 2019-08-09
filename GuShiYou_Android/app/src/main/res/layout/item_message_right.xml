@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-3-19 下午5:08
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include
+        android:id="@+id/tvTime"
+        layout="@layout/layout_message_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/message_time_marigin_bottom"
+        android:layout_marginTop="@dimen/message_time_marigin_top"
+        tools:visibility="visible" />
+
+
+    <include
+        android:id="@+id/ivAvatar"
+        layout="@layout/layout_message_avatar"
+        android:layout_width="@dimen/chat_avatar_size"
+        android:layout_height="@dimen/chat_avatar_size"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tvTime"
+        android:layout_marginRight="@dimen/medium_horizontal_margin" />
+
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ivAvatar"
+        android:layout_below="@+id/tvTime"
+        android:layout_marginLeft="@dimen/right_message_margin_horizontal"
+        android:layout_marginRight="@dimen/small_horizontal_margin"
+        android:layout_toLeftOf="@+id/ivAvatar"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/chat_avatar_size"
+        android:orientation="horizontal">
+
+        <ViewSwitcher
+            android:id="@+id/vsStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/medium_horizontal_margin"
+            android:layout_marginRight="@dimen/medium_horizontal_margin">
+
+            <com.afollestad.materialdialogs.common.progress.ProgressWheel xmlns:wheel="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/progressWheel"
+                android:layout_width="@dimen/small_circle_progress"
+                android:layout_height="@dimen/small_circle_progress"
+                wheel:matProg_barColor="@color/colorAccent"
+                wheel:matProg_barWidth="@dimen/small_progress_bar_width"
+                wheel:matProg_progressIndeterminate="true" />
+
+            <ImageView
+                android:id="@+id/ivFailed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_error_red_500_24dp" />
+        </ViewSwitcher>
+
+        <FrameLayout
+            android:id="@+id/flContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/chat_avatar_size">
+
+            <com.vanniktech.emoji.EmojiTextView
+                android:id="@+id/etvMessage"
+                style="@style/PrimaryTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|top"
+                android:background="@drawable/selector_message_bubble_right"
+                android:gravity="left|center_vertical"
+                android:lineSpacingExtra="@dimen/message_text_lineSpacingExtra"
+                android:minHeight="@dimen/chat_avatar_size"
+                android:visibility="gone"
+                app:emojiSize="@dimen/primary_emoji_size"
+                tools:text="你好，很高兴见到你" />
+
+            <com.gushiyou.app.main.widget.MaskImageView
+                android:id="@+id/mivImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:mask="@drawable/ic_message_image_mask_right" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/tvAlert"
+        layout="@layout/layout_message_alert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llMain"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/medium_vertical_margin" />
+</RelativeLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-7-29 下午6:24
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingRight="@dimen/activity_horizontal_margin">
+
+    <RelativeLayout
+        android:id="@+id/rlTime"
+        android:layout_width="@dimen/story_item_time_width"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/medium_horizontal_margin">
+
+        <TextView
+            android:id="@+id/tvYearMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/smallest_text_size" />
+
+        <TextView
+            android:id="@+id/tvDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tvYearMonth"
+            android:layout_marginRight="@dimen/medium_horizontal_margin"
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/story_day_textsize" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            style="@style/SmallestTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llContent"
+        style="@style/WhiteItemStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/story_item_card_padding"
+        android:paddingRight="@dimen/story_item_card_padding"
+        android:paddingTop="@dimen/story_item_card_padding">
+
+        <com.vanniktech.emoji.EmojiTextView
+            android:id="@+id/etvText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lineSpacingExtra="@dimen/story_text_lineSpacingExtra"
+            android:maxLines="5"
+            android:paddingBottom="@dimen/medium_vertical_margin"
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/story_text_textsize"
+            app:emojiSize="@dimen/story_circle_emoji_size" />
+
+        <com.gushiyou.app.main.widget.ClickableRecyclerView
+            android:id="@+id/rvImages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="-2dp"
+            android:overScrollMode="never"
+            android:paddingBottom="@dimen/medium_vertical_margin" />
+
+        <TextView
+            android:id="@+id/tvLocation"
+            style="@style/SmallestTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingBottom="@dimen/medium_vertical_margin"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/story_item_card_bottombar_height"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/small_vertical_margin">
+
+
+            <TextView
+                android:id="@+id/tvMessage"
+                style="@style/SecondaryTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_chat_bubble_outline_grey_600_18dp"
+                android:drawablePadding="@dimen/small_horizontal_margin"
+                android:gravity="center_vertical" />
+
+            <TextView
+                android:id="@+id/tvFavour"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_thumb_up_outline_grey_600_18dp"
+                android:drawablePadding="@dimen/small_horizontal_margin"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/activity_horizontal_margin" />
+
+            <ImageView
+                android:id="@+id/ivVisibility"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/story_item_visibility_margin_left"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

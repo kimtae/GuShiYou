@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-6-15 下午10:51
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/activity_background" />
+    <stroke
+        android:width="0.5dp"
+        android:color="@color/dividerColor" />
+    <corners android:radius="@dimen/write_mood_bottom_action_round_corner_radius" />
+</shape>

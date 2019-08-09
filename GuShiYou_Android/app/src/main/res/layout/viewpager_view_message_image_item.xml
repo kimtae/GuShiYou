@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by 邱志立 on 17-4-8 下午10:46
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rlProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:paddingBottom="@dimen/small_vertical_margin"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/pbDownloadProgress"
+            style="?android:progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/message_image_progress_height"
+            android:paddingBottom="@dimen/small_vertical_margin"
+            android:progressDrawable="@drawable/progress_drawable_download_message_image"
+            tools:progress="100" />
+
+        <TextView
+            android:id="@+id/tvSize"
+            style="@style/SecondaryTextInverseStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/pbDownloadProgress"
+            android:layout_alignStart="@+id/pbDownloadProgress"
+            android:layout_below="@+id/pbDownloadProgress"
+            android:gravity="end"
+            android:paddingLeft="@dimen/small_horizontal_margin"
+            tools:text="100%" />
+
+        <TextView
+            android:id="@+id/tvPercent"
+            style="@style/SecondaryTextInverseStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/pbDownloadProgress"
+            android:layout_alignRight="@+id/pbDownloadProgress"
+            android:layout_below="@+id/pbDownloadProgress"
+            android:gravity="start"
+            android:paddingRight="@dimen/small_horizontal_margin"
+            tools:text="512KB" />
+    </RelativeLayout>
+
+    <com.alexvasilkov.gestures.views.GestureImageView
+        android:id="@+id/givImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

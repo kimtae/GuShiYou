@@ -1,0 +1,196 @@
+<!--
+  ~ Created by 邱志立 on 17-4-26 上午11:02
+  ~ Copyright (c) 2017. All rights reserved.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.gushiyou.app.main.mvp.ui.fragment.RichEditorFragment">
+
+
+    <jp.wasabeef.richeditor.RichEditor
+        android:id="@+id/richEditor"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/rich_editor_bottom_toolbar_divider" />
+
+    <FrameLayout
+        android:id="@+id/flBottomToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="@color/rich_editor_text_toolbar_background"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rich_editor_bar_height"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/ivBold"
+                    style="@style/RichEditorToolbarItemStyle"
+                    android:src="@drawable/ic_format_bold_grey_600_24dp" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/ivItalic"
+                    style="@style/RichEditorToolbarItemStyle"
+                    android:src="@drawable/ic_format_italic_grey_600_24dp" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/ivStrikethrough"
+                    style="@style/RichEditorToolbarItemStyle"
+                    android:src="@drawable/ic_strikethrough_s_grey_600_24dp" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/ivFontSize"
+                    style="@style/RichEditorToolbarItemStyle"
+                    android:src="@drawable/ic_format_size_grey_600_24dp" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/ivFontColor"
+                    style="@style/RichEditorToolbarItemStyle"
+                    android:src="@drawable/ic_format_color_text_grey_600_24dp" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/ivFontBackgroundColor"
+                    style="@style/RichEditorToolbarItemStyle"
+                    android:src="@drawable/ic_format_color_fill_grey_600_24dp" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/ivAlignFull"
+                    style="@style/RichEditorToolbarItemStyle"
+                    android:src="@drawable/ic_format_align_justify_grey_600_24dp" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/ivAlignLeft"
+                    style="@style/RichEditorToolbarItemStyle"
+                    android:src="@drawable/ic_format_align_left_grey_600_24dp" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/ivAlignCenter"
+                    style="@style/RichEditorToolbarItemStyle"
+                    android:src="@drawable/ic_format_align_center_grey_600_24dp" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/ivAlignRight"
+                    style="@style/RichEditorToolbarItemStyle"
+                    android:src="@drawable/ic_format_align_right_grey_600_24dp" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/ivHeader1"
+                    style="@style/RichEditorToolbarItemStyle"
+                    android:src="@drawable/ic_format_header_1" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/ivHeader2"
+                    style="@style/RichEditorToolbarItemStyle"
+                    android:src="@drawable/ic_format_header_2" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/ivHeader3"
+                    style="@style/RichEditorToolbarItemStyle"
+                    android:src="@drawable/ic_format_header_3" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/ivHeader4"
+                    style="@style/RichEditorToolbarItemStyle"
+                    android:src="@drawable/ic_format_header_4" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/ivHeader5"
+                    style="@style/RichEditorToolbarItemStyle"
+                    android:src="@drawable/ic_format_header_5" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/ivHeader6"
+                    style="@style/RichEditorToolbarItemStyle"
+                    android:src="@drawable/ic_format_header_6" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/ivListBulleted"
+                    style="@style/RichEditorToolbarItemStyle"
+                    android:src="@drawable/ic_format_list_bulleted_grey_600_24dp" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/ivListNumbered"
+                    style="@style/RichEditorToolbarItemStyle"
+                    android:src="@drawable/ic_format_list_numbered_grey_600_24dp" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/ivSubscript"
+                    style="@style/RichEditorToolbarItemStyle"
+                    android:src="@drawable/ic_format_subscript" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/ivSuperscript"
+                    style="@style/RichEditorToolbarItemStyle"
+                    android:src="@drawable/ic_format_superscript" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/rich_editor_bottom_toolbar_background"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rich_editor_bar_height"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/ivUndo"
+                    style="@style/RichEditorToolbarItemStyle"
+                    android:src="@drawable/ic_undo_grey_600_24dp" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/ivRedo"
+                    style="@style/RichEditorToolbarItemStyle"
+                    android:src="@drawable/ic_redo_grey_600_24dp" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/ivText"
+                    style="@style/RichEditorToolbarItemStyle"
+                    android:src="@drawable/ic_format_text" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/ivQuote"
+                    style="@style/RichEditorToolbarItemStyle"
+                    android:src="@drawable/ic_format_quote_grey_600_24dp" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/ivAddPhoto"
+                    style="@style/RichEditorToolbarItemStyle"
+                    android:src="@drawable/ic_insert_photo_grey_600_24dp" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/ivAddLink"
+                    style="@style/RichEditorToolbarItemStyle"
+                    android:src="@drawable/ic_insert_link_grey_600_24dp"
+                    android:visibility="gone" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/ivMore"
+                    style="@style/RichEditorToolbarItemStyle"
+                    android:src="@drawable/ic_more_vert_grey_600_24dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </FrameLayout>
+</LinearLayout>
