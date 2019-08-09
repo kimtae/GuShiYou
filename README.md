@@ -1,19 +1,22 @@
 # GuShiYou
+
 一个以分享故事为主的社交平台
 
 ## 目录说明
 
 1. DataBackups：此目录备份了一些数据库表的数据
 
-2. GuShiYou_AdminFront：后台管理的前端
+2. GuShiYou_Database：数据库设计文件（用MySQL Workbench设计）
 
-3. GuShiYou_AdminServer：后台管理的后端
+3. GuShiYou_AdminFront：后台管理的前端 （用Vue实现）
 
-4. GuShiYou_Android：app安卓端
+4. GuShiYou_AdminServer：后台管理的后端 （用JFinal开发）
 
-5. GuShiYou_AppServer：app服务端
+5. GuShiYou_Android：app安卓端 （Dagger2、RxAndroid、Retrofit、Glide、GreenDao、IM用的网易云信等）
 
-6. Screenshots：界面截图
+6. GuShiYou_AppServer：app服务端 （用JFinal开发）
+
+7. Screenshots：界面截图
 
 ## app部分界面截图
 
