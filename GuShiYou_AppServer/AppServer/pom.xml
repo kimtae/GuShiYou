@@ -23,7 +23,7 @@
 		<maven.compiler.encoding>UTF-8</maven.compiler.encoding>
 
 		<junit.version>4.13.1</junit.version>
-		<jfinal.version>2.3-SNAPSHOT</jfinal.version>
+		<jfinal.version>4.9.11</jfinal.version>
 		<freemarker.version>2.3.25-incubating</freemarker.version>
 		<servlet.api.version>3.1.0</servlet.api.version>
 		<jsoup.version>1.9.2</jsoup.version>
